@@ -18,3 +18,5 @@ FriendListItem.propTypes ={
     avatar: PropTypes.string,
     name: PropTypes.string,
 }
+
+console.log("hello")
