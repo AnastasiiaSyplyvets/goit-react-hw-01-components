@@ -19,4 +19,3 @@ FriendListItem.propTypes ={
     name: PropTypes.string,
 }
 
-console.log("hello")
