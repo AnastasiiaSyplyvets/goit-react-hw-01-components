@@ -1,0 +1,14 @@
+.TableLine:nth-child(2n){
+background-color: rgb(230, 230, 230);
+}
+
+.TableLine {
+    height:40px;
+    text-align:center;
+
+    color: rgb(140, 140, 140);
+}
+
+.TransType::first-letter {
+text-transform: uppercase;
+}

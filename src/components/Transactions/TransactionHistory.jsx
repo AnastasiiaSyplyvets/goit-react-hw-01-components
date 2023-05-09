@@ -1,14 +1,16 @@
 import {TableRow} from './TableRow.jsx'
+import css from './TransactionHistory.module.css';
+
 
 export const TransactionHistory =(props)=> {
     const {items} = props;
     return (
-        <table class="transaction-history">
-  <thead>
+        <table className={css.transactionHistory}>
+  <thead className={css.TableHead}>
     <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
+      <th className={css.ColumnName}>Type</th>
+      <th className={css.ColumnName}>Amount</th>
+      <th className={css.ColumnName}>Currency</th>
     </tr>
   </thead>
 

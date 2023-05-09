@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import {StatisticElement} from './StatisticElement';
+import css from './Statistic.module.css';
 
 export const Statistics =(props)=> {
     const {title="Upload stats", stats} = props;
 
-    return (<section class="statistics">
-    <h2 class="title">{title && "Upload stats"}</h2>
+    return (<section className={css.statistics}>
+    <h2 className={css.StatTitle}>{title && "Upload stats"}</h2>
   
-    <ul class="stat-list">
+    <ul className={css.StatList}>
      {stats.map(element => (
          <StatisticElement
          key = {element.id}

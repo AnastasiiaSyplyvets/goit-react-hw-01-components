@@ -1,0 +1,26 @@
+.transactionHistory{
+
+    width: 700px;
+    margin-left:auto;
+    margin-right:auto;
+
+    margin-bottom: 50px;
+
+    
+    
+}
+
+.TableHead{
+    height:30px;
+
+    background-color: rgb(51, 204, 204);
+}
+
+.ColumnName {
+    font-size: 16px;
+    font-weight:500;
+    
+    text-transform:uppercase;
+    color: #fff;
+
+}
