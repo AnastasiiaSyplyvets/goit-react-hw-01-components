@@ -3,7 +3,7 @@ import css from './UserProfile.module.css';
 
 export const UserCard = (props)=> {
 
-    const {avatar, username, tag, location, followers, views, likes } = props;
+    const {avatar, username, tag, location, stats } = props;
 return (
 
 <div className={css.profile}>
@@ -22,15 +22,15 @@ return (
 <ul className={css.stats}>
   <li className={css.listItem}>
     <span className={css.label}>Followers</span>
-    <span className={css.quantity}> {followers}</span>
+    <span className={css.quantity}> {stats.followers}</span>
   </li>
   <li className={css.listItem}>
     <span className={css.label}>Views</span>
-    <span className={css.quantity}> {views}</span>
+    <span className={css.quantity}> {stats.views}</span>
   </li>
   <li className={css.listItem}>
     <span className={css.label}>Likes</span>
-    <span className={css.quantity}> {likes}</span>
+    <span className={css.quantity}> {stats.likes}</span>
   </li>
 </ul>
 
@@ -39,12 +39,11 @@ return (
 console.log(UserCard)
 
 UserCard.propTypes ={
-    avatar: PropTypes.string,
-    username: PropTypes.string,
-    tag: PropTypes.string,
-    location: PropTypes.string,
-    followers: PropTypes.number,
-    views: PropTypes.number,
-    likes: PropTypes.number,
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.objectOf(PropTypes.number),
+   
 }
 

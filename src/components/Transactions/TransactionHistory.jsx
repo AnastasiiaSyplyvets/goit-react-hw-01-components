@@ -1,4 +1,4 @@
-import {TableRow} from './TableRow.jsx'
+import PropTypes from 'prop-types';
 import css from './TransactionHistory.module.css';
 
 
@@ -16,15 +16,25 @@ export const TransactionHistory =(props)=> {
 
   <tbody>
   {items.map(element => (
-      <TableRow
-      key={element.id}
-      type={element.type}
-      amount={element.amount}
-      currency={element.currency}
-      />
+      <tr key={element.id} className={css.TableLine}>
+      <td className={css.TransType}>{element.type}</td>
+      <td>{element.amount}</td>
+      <td>{element.currency}</td>
+    </tr>
+
+      
   ))}
     
   </tbody>
 </table>
     )
+}
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+key: PropTypes.string,
+type: PropTypes.string.isRequired,
+amount: PropTypes.string.isRequired,
+currency: PropTypes.string.isRequired,
+  })).isRequired
 }

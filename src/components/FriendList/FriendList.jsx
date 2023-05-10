@@ -2,7 +2,7 @@ import {FriendListItem} from './FriendListItem';
 import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
 
-// import friends from '../../../src/friends.json';
+
 
 export const FriendList =(props)=> {
     const {friends}= props;
@@ -21,5 +21,7 @@ export const FriendList =(props)=> {
 }
 
 FriendList.propTypes ={
-    friends: PropTypes.array,
+    friends: PropTypes.arrayOf(PropTypes.shape({
+        key: PropTypes.number,
+    }))
 }
